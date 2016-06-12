@@ -17,8 +17,7 @@ int main(int argc,char** argv)
 
 	Bind(listenfd,(SA*)&servaddr,sizeof(servaddr));
 
-	Listen(listenfd,LISTENQ);
-
+	Listen(listenfd,5);
 	for(;;){
 		connfd = Accept(listenfd,(SA*)NULL,NULL);
 
